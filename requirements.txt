@@ -1,0 +1,12 @@
+transformers
+pypdf
+langchain
+chromadb
+langchainhub
+sentence-transformers
+langchain-openai
+unstructured
+grandalf
+accelerate
+auto-gptq
+optimum

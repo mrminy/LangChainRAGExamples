@@ -5,7 +5,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
-from langchain_community.vectorstores.faiss import FAISS
+from langchain_community.vectorstores.chroma import Chroma
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
@@ -33,7 +33,7 @@ splits = text_splitter.split_documents(data)
 
 print("Creating vectorstore...")
 embeddings = HuggingFaceEmbeddings(model_name=embeddings_model_id)
-vectorstore = FAISS.from_documents(documents=splits, embedding=embeddings)
+vectorstore = Chroma.from_documents(documents=splits, embedding=embeddings)
 
 print("Creating retriever...")
 retriever = vectorstore.as_retriever()
