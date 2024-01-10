@@ -1,5 +1,7 @@
 import os
-
+"""
+Util script to convert folder with documents of various formats into text files
+"""
 
 def convert_to_txt_and_delete_old(directory):
     for root, dirs, files in os.walk(directory):
