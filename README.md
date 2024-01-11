@@ -1,8 +1,8 @@
 # LangChain RAG Examples
 
-This repo contains two examples of Retrieval-Augmented Generation (RAG) with LangChain.
-1. **[Easy RAG with LangChain and OpenAI](openai_langchain.py)**
-2. **[Local RAG with LangChain and a Norwegian LLM](local_langchain.py)**
+This repo contains two examples (in Python-form and Jupyter Notebook form) of Retrieval-Augmented Generation (RAG) with LangChain.
+1. **[Easy RAG with LangChain and OpenAI (notebook)](openai_langchain_notebook.ipynb)**
+2. **[Local RAG with LangChain and a Norwegian LLM (notebook)](local_langchain_notebook.ipynb)**
 
 ## Setup
 Install Python 3.10 and the required frameworks from `required.txt`.

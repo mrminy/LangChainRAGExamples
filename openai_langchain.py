@@ -46,7 +46,8 @@ rag_chain = (
 )
 
 print("Invoking RAG...")
-result = rag_chain.invoke("In LangChain, how can I get the graph of a chain and print it as ascii?")
+result = rag_chain.invoke("In LangChain, how can I get the graph"
+                          " of a chain and print it as ascii?")
 print(result)
 
 rag_chain.get_graph().print_ascii()

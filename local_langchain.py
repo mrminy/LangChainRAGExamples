@@ -27,7 +27,7 @@ print("Loading data...")
 loader = PyPDFLoader("./data/my-cv.pdf")
 data = loader.load()
 
-print("Split data into chunks...")
+print("Splitting data into chunks...")
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=512, chunk_overlap=24, keep_separator=True)
 splits = text_splitter.split_documents(data)
 
@@ -40,9 +40,9 @@ retriever = vectorstore.as_retriever()
 
 print("Creating prompt...")
 prompt = PromptTemplate(input_variables=['context', 'question'],
-                        template="Du er en assistent for en IT-konsulent som skal fylle ut et tilbud til en mulig ny "
-                                 "kunde. Bruk følgende informasjon for å besvare oppgaven. Hvis du ikke vet svaret, "
-                                 "så si at du ikke vet det. Svar med ca. fem setninger."
+                        template="Du er en assistent for en IT konsulent. "
+                                 "Bruk følgende informasjon for å besvare oppgaven. Hvis du ikke vet svaret, "
+                                 "så si at du ikke vet det. Svar så presist som mulig."
                                  "\nOppgave: {question}\nInformasjon: {context}\nSvar:")
 print("Selected prompt:", prompt)
 
